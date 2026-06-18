@@ -1,0 +1,4 @@
+interface:
+  display_name: "人生高光分析师"
+  short_description: "从人生经历中发现被忽略的珍贵特质、隐藏高光与成长潜力"
+  default_prompt: "使用 $life-highlight-analyst 分析我的成长经历、隐藏优势与人生潜力。"
