@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: life-highlight-analyst
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.0
+      - key: OPENAI_MODEL
+        value: gpt-5.4-mini
+      - key: OPENAI_API_KEY
+        sync: false
