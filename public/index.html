@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="人生高光分析师，从你的经历中发现被忽略的珍贵特质、隐藏高光与成长潜力。"
+    />
+    <meta name="theme-color" content="#f5eee4" />
+    <title>人生高光分析师</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="app-shell">
+      <aside class="story-panel" aria-label="产品介绍">
+        <a class="brand" href="/" aria-label="人生高光分析师首页">
+          <span class="brand-mark" aria-hidden="true">光</span>
+          <span>人生高光分析师</span>
+        </a>
+
+        <section class="hero-copy">
+          <p class="eyebrow">LIFE HIGHLIGHT ANALYST</p>
+          <h1>你走过的路，<br />都在悄悄发光。</h1>
+          <p class="hero-description">
+            说说你的经历。我们不做轻飘飘的夸奖，而是从真实细节里，找到你可能早已习以为常的珍贵。
+          </p>
+        </section>
+
+        <div class="promise-card">
+          <span class="promise-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>具体，而不是空泛</strong>
+            <p>每一份肯定，都尽量回应你真实讲过的人生。</p>
+          </div>
+        </div>
+
+        <p class="privacy-note">请只分享你愿意说的部分。对话不会保存在本站数据库中。</p>
+      </aside>
+
+      <section class="chat-panel" aria-label="与人生高光分析师对话">
+        <header class="chat-header">
+          <div class="analyst-profile">
+            <div class="avatar" aria-hidden="true"><span>✦</span></div>
+            <div>
+              <h2>人生高光分析师</h2>
+              <p><span class="status-dot"></span><span id="service-status">正在连接</span></p>
+            </div>
+          </div>
+          <button class="ghost-button" id="new-chat" type="button" aria-label="开始新对话">
+            <span aria-hidden="true">↻</span>
+            <span>重新开始</span>
+          </button>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <article class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true">光</div>
+            <div class="message-content">
+              <div class="bubble">
+                <p>嗨，欢迎你来。</p>
+                <p>
+                  我想听听你走过的路，再陪你看看：那些你觉得“也没什么”的选择和坚持，究竟藏着怎样的力量。
+                </p>
+                <p>你可以从下面任意一点开始，不需要一次说完：</p>
+                <ul>
+                  <li>你的年龄或出生年份、主要成长城市</li>
+                  <li>一段对你影响很大的经历</li>
+                  <li>眼下最困扰你的情感、工作或人生问题</li>
+                </ul>
+              </div>
+              <time>现在</time>
+            </div>
+          </article>
+
+          <div class="starter-section" id="starters">
+            <p>不知道从哪里开始？试试：</p>
+            <div class="starter-grid">
+              <button class="starter" type="button" data-prompt="我想分析自己的成长经历和性格底色。">
+                <span>成长底色</span>
+                <small>我为什么成为现在的我？</small>
+              </button>
+              <button class="starter" type="button" data-prompt="我最近在工作上有些迷茫，想看看自己的优势和方向。">
+                <span>工作迷茫</span>
+                <small>我的长处该放在哪里？</small>
+              </button>
+              <button class="starter" type="button" data-prompt="我想更理解自己在亲密关系中的需求和盲区。">
+                <span>情感关系</span>
+                <small>我适合怎样的相处方式？</small>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer-wrap">
+          <div class="error-banner" id="error-banner" role="alert" hidden></div>
+          <form class="composer" id="chat-form">
+            <label class="sr-only" for="message-input">输入你的经历或困惑</label>
+            <textarea
+              id="message-input"
+              rows="1"
+              maxlength="8000"
+              placeholder="写下你的经历或此刻的困惑…"
+              enterkeyhint="send"
+            ></textarea>
+            <button class="send-button" id="send-button" type="submit" aria-label="发送">
+              <span aria-hidden="true">↑</span>
+            </button>
+          </form>
+          <p class="composer-tip">Enter 发送 · Shift + Enter 换行 · AI 分析仅供个人成长参考</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
